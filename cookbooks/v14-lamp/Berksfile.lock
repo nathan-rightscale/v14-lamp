@@ -1,0 +1,143 @@
+DEPENDENCIES
+  application_php
+    git: git://github.com/rightscale-cookbooks-contrib/application_php.git
+    revision: fee46f9e5a7eb41929ee00585338fbf42e9f311d
+    branch: template_fix_and_application_cookbook_upgrade
+  apt (~> 2.3.0)
+  collectd
+    git: git://github.com/rightscale-cookbooks-contrib/chef-collectd.git
+    revision: ec50609ed6eb193e0411f30aced91befa571940f
+    branch: generalize_install_for_both_centos_and_ubuntu
+  curl (~> 1.1.0)
+  database
+    git: git://github.com/rightscale-cookbooks-contrib/database.git
+    revision: e7b23e77a3987afdf5d1fefc84edd023ec2497f3
+    branch: rs-fixes
+  dns
+    git: git://github.com/rightscale-cookbooks-contrib/dns.git
+    revision: 151881c76f2567f4a8f014f0889f641cc86fd968
+    branch: rightscale_development_v2
+  mysql
+    git: git://github.com/rightscale-cookbooks-contrib/mysql.git
+    revision: e87fd53cc5b02e18beafa108eed211ae6a56a387
+    branch: rs-fixes
+  rhsm (~> 1.0.0)
+  rs-application_php
+    git: git://github.com/rightscale-cookbooks/rs-application_php.git
+    revision: b9a5e52febd94f6c353eef9eba20abe91012b3cc
+  rs-mysql
+    git: git://github.com/rightscale-cookbooks/rs-mysql.git
+    revision: 92b7cca870cac912819a671548fe3c439483af4b
+  v14-lamp
+    path: .
+    metadata: true
+  yum-epel (~> 0.4.0)
+
+GRAPH
+  apache2 (2.0.0)
+    iptables (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    pacman (>= 0.0.0)
+  application (4.1.4)
+  application_php (2.0.1)
+    apache2 (~> 2.0.0)
+    application (~> 4.0)
+    php (>= 0.0.0)
+  apt (2.3.10)
+  aws (2.4.0)
+  build-essential (1.4.4)
+  chef-sugar (2.4.1)
+  chef_handler (1.1.6)
+  collectd (1.1.0)
+  curl (1.1.0)
+  database (1.5.2)
+    aws (>= 0.0.0)
+    mysql (>= 1.3.0)
+    postgresql (>= 1.0.0)
+    xfs (>= 0.0.0)
+  dmg (2.2.0)
+  dns (0.1.3)
+    build-essential (>= 1.1.0)
+    hosts_file (~> 0.1.4)
+    xml (~> 1.2.0)
+  filesystem (0.9.0)
+    lvm (~> 1.1.0)
+  git (4.0.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  hosts_file (0.1.4)
+  iis (2.1.5)
+    windows (>= 1.2.6)
+  iptables (0.14.0)
+  logrotate (1.7.0)
+  lvm (1.1.2)
+  machine_tag (1.0.6)
+  marker (1.0.1)
+  mysql (4.0.20)
+    build-essential (~> 1.4)
+    openssl (~> 1.1)
+  openssl (1.1.0)
+  pacman (1.1.1)
+  php (1.4.6)
+    build-essential (>= 0.0.0)
+    iis (>= 0.0.0)
+    mysql (>= 0.0.0)
+    windows (>= 0.0.0)
+    xml (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  postgresql (3.4.10)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  rhsm (1.0.0)
+    chef-sugar (>= 0.0.0)
+  rightscale_backup (1.1.5)
+    rightscale_volume (~> 1.2.2)
+  rightscale_tag (1.0.2)
+    machine_tag (~> 1.0.3)
+    marker (~> 1.0.0)
+  rightscale_volume (1.2.3)
+  rs-application_php (1.1.0)
+    application (~> 4.1.4)
+    application_php (~> 2.0.0)
+    collectd (~> 1.1.0)
+    database (~> 1.5.2)
+    git (~> 4.0.2)
+    marker (~> 1.0.0)
+    php (~> 1.4.4)
+    rightscale_tag (~> 1.0.1)
+  rs-mysql (1.1.1)
+    chef_handler (~> 1.1.6)
+    collectd (~> 1.1.0)
+    database (~> 1.5.2)
+    dns (~> 0.1.3)
+    filesystem (~> 0.9.0)
+    git (~> 4.0.2)
+    lvm (~> 1.1.0)
+    marker (~> 1.0.0)
+    mysql (~> 4.0.18)
+    rightscale_backup (~> 1.1.5)
+    rightscale_tag (~> 1.0.2)
+    rightscale_volume (~> 1.2.3)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  v14-lamp (0.1.0)
+    application (>= 0.0.0)
+    marker (>= 0.0.0)
+    rs-application_php (>= 0.0.0)
+    rs-mysql (>= 0.0.0)
+  windows (1.34.6)
+    chef_handler (>= 0.0.0)
+  xfs (1.1.0)
+  xml (1.2.6)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+  yum (3.3.2)
+  yum-epel (0.4.0)
+    yum (~> 3.0)
